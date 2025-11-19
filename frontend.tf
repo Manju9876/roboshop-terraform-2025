@@ -17,8 +17,7 @@ resource "aws_instance" "frontend" {
     }
     inline = [
       "sudo python3.11 -m pip install ansible",
-      "ansible-pull -i localhost, -U https://github.com/Manju9876/roboshop-ansible-2025.git -e component_name=frontend -e env=dev roboshop.yaml"
-
+#      "ansible-pull -i localhost, -U https://github.com/Manju9876/roboshop-ansible-2025.git -e component_name=frontend -e env=dev roboshop.yaml",
     ]
   }
 }
