@@ -1,6 +1,6 @@
 resource "aws_instance" "catalogue" {
-  ami           = "ami-09c813fb71547fc4f"
-  instance_type = "t3.micro"
+  ami           = var.ami_id
+  instance_type = var.instance_type
   vpc_security_group_ids = ["sg-043ff9d2da877c20a"]
 
   tags = {
