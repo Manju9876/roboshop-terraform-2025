@@ -12,5 +12,6 @@ variable "instance_type" {
 
 variable "vpc_security_group-ids" {
   description = "Allow all security group"
+  type = list(string)
   default = ["sg-043ff9d2da877c20a"]
 }
