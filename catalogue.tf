@@ -7,6 +7,7 @@ resource "aws_instance" "catalogue" {
     Name = "catalogue-dev"
   }
 
+
   provisioner "remote-exec" {
 
     connection {
