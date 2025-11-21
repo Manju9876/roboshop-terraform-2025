@@ -1,7 +1,7 @@
 resource "aws_instance" "mongodb" {
-  ami           = "ami-09c813fb71547fc4f"
-  instance_type = "t3.micro"
-  vpc_security_group_ids = ["sg-043ff9d2da877c20a"]
+  ami           = var.ami_id
+  instance_type = var.instance_type
+  vpc_security_group_ids = var.vpc_security_group-ids
 
   tags = {
     Name = "mongodb-dev"

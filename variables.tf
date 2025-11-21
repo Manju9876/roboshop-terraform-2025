@@ -9,3 +9,8 @@ variable "instance_type" {
   type = string
   default = "t3.micro"
 }
+
+variable "vpc_security_group-ids" {
+  description = "Allow all security group"
+  default = ["sg-043ff9d2da877c20a"]
+}

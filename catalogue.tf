@@ -1,13 +1,22 @@
 resource "aws_instance" "catalogue" {
-  ami           = "ami-09c813fb71547fc4f"
-  instance_type = "t3.micro"
-  vpc_security_group_ids = ["sg-043ff9d2da877c20a"]
+  ami           = var.ami_id
+  instance_type = var.instance_type
+  vpc_security_group_ids = var.vpc_security_group-ids
 
   tags = {
     Name = "catalogue-dev"
   }
+}
 
+resource "aws_route53_record" "catalogue" {
+  zone_id = "Z03117651054LFO2TDC32"
+  name    = "catalogue-dev"
+  type    = "A"
+  ttl     = 30
+  records = [aws_instance.catalogue.private_ip]
+}
 
+resource "null_resource" "catalogue" {
   provisioner "remote-exec" {
 
     connection {
@@ -21,12 +30,4 @@ resource "aws_instance" "catalogue" {
       "ansible-pull -i localhost, -U https://github.com/Manju9876/roboshop-ansible-2025.git -e component_name=frontend -e env=dev roboshop.yaml",
     ]
   }
-}
-
-resource "aws_route53_record" "catalogue" {
-  zone_id = "Z03117651054LFO2TDC32"
-  name    = "catalogue-dev"
-  type    = "A"
-  ttl     = 30
-  records = [aws_instance.catalogue.private_ip]
 }
