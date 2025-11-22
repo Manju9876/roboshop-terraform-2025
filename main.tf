@@ -1,13 +1,4 @@
-resource "aws_instance" "instances" {
-  count = length(var.instance_name)
-  ami           = var.ami_id
-  instance_type = var.instance_type
-  vpc_security_group_ids = var.vpc_security_group-ids
 
-  tags = {
-    Name = "${var.instance_name.[count.index]}"
-  }
-}
 
 #
 # resource "aws_route53_record" "catalogue" {
