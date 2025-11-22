@@ -5,8 +5,8 @@ variable "ami_id" {
 }
 variable "instance_name" {
   default = [
+    "mongodb",
   "frontend",
-  "mongodb",
   "catalogue"
   ]
 }
