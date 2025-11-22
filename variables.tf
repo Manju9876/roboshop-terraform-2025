@@ -4,12 +4,13 @@ variable "ami_id" {
   default = "ami-09c813fb71547fc4f"
 }
 variable "instance_name" {
-  default = [
-    "mongodb",
-  "frontend",
-  "catalogue"
-  ]
+  default = {
+    mongodb = null,
+    catalogue = null,
+    frontend = null
+  }
 }
+
 variable "instance_type" {
   description = "ram setup"
   type = string
