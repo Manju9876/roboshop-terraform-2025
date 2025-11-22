@@ -21,3 +21,15 @@ variable "vpc_security_group-ids" {
   type = list(string)
   default = ["sg-043ff9d2da877c20a"]
 }
+
+variable "zone_id" {
+  description = "hosted zone of domain"
+  type = string
+  default = "Z03117651054LFO2TDC32"
+}
+
+variable "env" {
+  description = "environment type"
+  type = string
+  default = "dev"
+}
