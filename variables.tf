@@ -1,20 +1,18 @@
-variable "ami_id" {
-  description = "pre configrured template to launch ec2 instacne"
-  type = string
-  default = "ami-09c813fb71547fc4f"
-}
 variable "instance_name" {
   default = {
-    mongodb = null,
-    catalogue = null,
-    frontend = null
+    mongodb = {
+      ami_id = "ami-09c813fb71547fc4f"
+      instance_type = "t3.micro"
+    }
+    catalogue = {
+      ami_id = "ami-09c813fb71547fc4f"
+      instance_type = "t3.micro"
+    }
+    frontend = {
+      ami_id = "ami-09c813fb71547fc4f"
+      instance_type = "t3.micro"
+    }
   }
-}
-
-variable "instance_type" {
-  description = "ram setup"
-  type = string
-  default = "t3.micro"
 }
 
 variable "vpc_security_group-ids" {

@@ -1,14 +1,13 @@
 resource "aws_instance" "instances" {
   for_each = var.instance_name
-  ami           = var.ami_id
-  instance_type = var.instance_type
+  ami           = each.value["ami_id"]
+  instance_type = each.value["instance_type"]
   vpc_security_group_ids = var.vpc_security_group-ids
 
   tags = {
     Name = each.key
   }
 }
-
 
 resource "aws_route53_record" "record" {
   for_each = var.instance_name
