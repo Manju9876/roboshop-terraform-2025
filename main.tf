@@ -1,13 +1,26 @@
-resource "aws_instance" "instances" {
-  count = length(var.instance_name)
-  ami           = var.ami_id
-  instance_type = var.instance_type
-  vpc_security_group_ids = var.vpc_security_group-ids
+module "ec2" {
+  for_each = var.tag_name
+  source = "./modules/ec2"
 
-  tags = {
-    Name = "${var.instance_name.[count.index]}"
-  }
+  ami_id =  each.value["ami_id"]
+  instance_type = each.value["instance_type"]
+  vpc_security_group_ids = var.vpc_security_group_ids
+
+  tag_name = each.key
 }
+
+
+
+#resource "aws_instance" "instances" {
+#   count = length(var.instance_name)
+#   ami           = var.ami_id
+#   instance_type = var.instance_type
+#   vpc_security_group_ids = var.vpc_security_group_ids
+#
+#   tags = {
+#     Name = var.instance_name[count.index]
+#   }
+# }
 
 #
 # resource "aws_route53_record" "catalogue" {
