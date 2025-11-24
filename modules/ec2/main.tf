@@ -7,3 +7,11 @@ resource "aws_instance" "instances" {
     name = var.tag_name
   }
 }
+
+resource "aws_route53_record" "www" {
+  zone_id = var.zone_id
+  name    = "${var.tag_name}-${env}"
+  type    = "A"
+  ttl     = 30
+  records = aws_instance.instances.private_ip
+}
