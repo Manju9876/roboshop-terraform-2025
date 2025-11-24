@@ -1,9 +1,10 @@
 module "ec2" {
   for_each = var.tag_name
-  source = "./modules/ec2"
+  source   = "./modules/ec2"
 
-  ami_id =  each.value["ami_id"]
-  instance_type = each.value["instance_type"]
+  ami_id                 = each.value["ami_id"]
+  instance_type          = each.value["instance_type"]
+  env                    = var.env
   vpc_security_group_ids = var.vpc_security_group_ids
 
   tag_name = each.key
