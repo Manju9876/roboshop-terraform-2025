@@ -4,15 +4,12 @@ module "ec2" {
 
   ami_id                 = each.value["ami_id"]
   instance_type          = each.value["instance_type"]
-  env                    = var.env
   vpc_security_group_ids = var.vpc_security_group_ids
-  zone_id = var.zone_id
+  zone_id                = var.zone_id
+  env                    = var.env
+  tag_name               = each.key
 
-  tag_name = each.key
 }
-
-
-
 #resource "aws_instance" "instances" {
 #   count = length(var.instance_name)
 #   ami           = var.ami_id
