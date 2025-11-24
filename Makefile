@@ -13,11 +13,11 @@ dev-destroy:
 prod-apply:
 	git pull
 	rm -f .terraform/terraform.tfstate
-	terraform init -backend-config=env-dev/state.tfvars
+	terraform init -backend-config=env-prod/state.tfvars
 	terraform apply -backend-config=env-dev/main.tfvars
 
 prod-destroy:
 	git pull
 	rm -f .terraform/terraform.tfstate
-	terraform init -backend-config=env-dev/state.tfvars
+	terraform init -backend-config=env-prod/state.tfvars
 	terraform destroy -backend-config=env-dev/main.tfvars
