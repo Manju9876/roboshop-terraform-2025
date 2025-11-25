@@ -1,6 +1,6 @@
 resource "aws_instance" "instances" {
   ami                    = var.ami_id
-  instance_type          = var.instance_type
+#  instance_type          = var.instance_type
   vpc_security_group_ids = var.vpc_security_group_ids
 
   tags = {
@@ -20,7 +20,7 @@ resource "aws_route53_record" "records" {
 resource "aws_spot_instance_request" "spot_request" {
   ami                            = var.ami_id
   #  spot_price    = "0.03"
-  #  instance_type = "c4.xlarge"
+  instance_type          = var.instance_type
   instance_interruption_behavior = "stop"
   spot_type = "persistent"
 
