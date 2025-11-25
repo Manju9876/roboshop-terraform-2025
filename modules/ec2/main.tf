@@ -40,7 +40,8 @@ resource "null_resource" "ansible_code" {
     }
 
     inline = [
-      "sudo python3.11 -m pip install ansible",
+      "sudo dnf install -y git python3-pip",
+      "sudo pip3 install ansible",
       "ansible-pull -i localhost, -U https://github.com/Manju9876/roboshop-ansible-2025 roboshop.yaml -e component_name=${var.tag_name} -e env=${var.env}"
     ]
   }
