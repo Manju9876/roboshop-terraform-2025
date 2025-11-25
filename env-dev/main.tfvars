@@ -39,10 +39,10 @@ tag_name = {
     ami_id        = "ami-09c813fb71547fc4f"
     instance_type = "t3.small"
   }
-  dispatch = {
-    ami_id        = "ami-09c813fb71547fc4f"
-    instance_type = "t3.small"
-  }
+  # dispatch = {
+  #   ami_id        = "ami-09c813fb71547fc4f"
+  #   instance_type = "t3.small"
+  # }
 }
 
 zone_id = "Z03117651054LFO2TDC32"
