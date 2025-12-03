@@ -8,6 +8,7 @@ module "ec2" {
   zone_id                = var.zone_id
   env                    = var.env
   tag_name               = each.key
+  vault_token            = var.vault_token
 
 }
 
