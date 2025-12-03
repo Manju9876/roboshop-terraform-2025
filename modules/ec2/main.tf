@@ -35,8 +35,8 @@ resource "null_resource" "ansible_code" {
 
     connection {
       type     = "ssh"
-      user     = "ec2-user"
-      password = "DevOps321"
+      user     = data.vault_generic_secret.sample.data["username"]
+      password = data.vault_generic_secret.sample.data["password"]
       host     = aws_instance.instances.private_ip
     }
 

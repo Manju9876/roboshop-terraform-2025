@@ -10,6 +10,7 @@ module "ec2" {
   tag_name               = each.key
 
 }
+
 #resource "aws_instance" "instances" {
 #   count = length(var.instance_name)
 #   ami           = var.ami_id
