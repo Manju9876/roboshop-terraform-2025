@@ -16,19 +16,6 @@ resource "aws_route53_record" "records" {
   records = [aws_instance.instances.private_ip]
 }
 
-# Request a spot instance at $0.03
-# resource "aws_spot_instance_request" "spot_request" {
-#   ami                            = var.ami_id
-#   #  spot_price    = "0.03"
-#   instance_type          = var.instance_type
-#   instance_interruption_behavior = "stop"
-#   spot_type = "persistent"
-#
-#   tags = {
-#     Name = var.tag_name
-#   }
-# }
-
 resource "null_resource" "ansible_code" {
   depends_on = [aws_route53_record.records]
   provisioner "remote-exec" {
