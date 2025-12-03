@@ -13,7 +13,7 @@ tag_name = {
   }
 }
 
-zone_id = "Z03117651054LFO2TDC32"
+zone_id = "Z0739029GOTW9PY9KD3W"
 
 vpc_security_group_ids = ["sg-043ff9d2da877c20a"]
 
