@@ -2,6 +2,6 @@ provider "aws" {
   region = "us-east-1"
 }
 provider "vault" {
-  address = "http://44.222.105.0:8200"
+  address = "http://3.239.5.196:8200"
   token = var.vault_token
 }
