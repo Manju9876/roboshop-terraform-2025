@@ -9,6 +9,7 @@ module "ec2" {
   env                    = var.env
   tag_name               = each.key
   vault_token            = var.vault_token
+  private_key_path       = var.private_key_path
 
 }
 
