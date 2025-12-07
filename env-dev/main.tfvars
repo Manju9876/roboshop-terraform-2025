@@ -51,4 +51,4 @@ vpc_security_group_ids = ["sg-043ff9d2da877c20a"]
 
 env = "dev"
 
-private_key_path = "/home/ec2-user/.ssh/ext.pem"
+private_key_path = "~/.ssh/ext.pem"
