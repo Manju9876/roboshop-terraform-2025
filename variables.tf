@@ -7,4 +7,3 @@ variable "env" {}
 variable "vault_token" {}
 
 
-variable "private_key_path" {}
