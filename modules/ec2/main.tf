@@ -24,7 +24,8 @@ resource "null_resource" "ansible_code" {
     connection {
       type     = "ssh"
       user     = data.vault_generic_secret.sample.data["username"]
-      password = data.vault_generic_secret.sample.data["password"]
+#      password = data.vault_generic_secret.sample.data["password"]
+      private_key = file(var.private_key_path)
       host     = aws_instance.instances.private_ip
     }
 
