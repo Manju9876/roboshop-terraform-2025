@@ -6,19 +6,15 @@ tag_name = {
   catalogue = {
     ami_id        = "ami-09c813fb71547fc4f"
     instance_type = "t3.small"
-  }
-
+  # }
   # frontend = {
   #   ami_id        = "ami-09c813fb71547fc4f"
   #   instance_type = "t3.small"
-  #   ansible_role  = "frontend-docker"
   #  }
   cart = {
     ami_id        = "ami-09c813fb71547fc4f"
     instance_type = "t3.small"
-
-   # ansible_role  = "cart-docker"
-   }
+  }
   # mysql = {
   #   ami_id        = "ami-09c813fb71547fc4f"
   #   instance_type = "t3.small"
@@ -26,7 +22,6 @@ tag_name = {
   # shipping = {
   #   ami_id        = "ami-09c813fb71547fc4f"
   #   instance_type = "t3.small"
-  #   ansible_role  = "shipping-docker"
   # }
   # redis = {
   #   ami_id        = "ami-09c813fb71547fc4f"
@@ -35,12 +30,10 @@ tag_name = {
   # payment = {
   #   ami_id        = "ami-09c813fb71547fc4f"
   #   instance_type = "t3.small"
-  #   ansible_role  = "payment-docker"
   # }
   # user = {
   #   ami_id        = "ami-09c813fb71547fc4f"
   #   instance_type = "t3.small"
-  #   ansible_role  = "user-docker"
   # }
   # rabbitmq = {
   #   ami_id        = "ami-09c813fb71547fc4f"
@@ -49,7 +42,6 @@ tag_name = {
   # dispatch = {
   #   ami_id        = "ami-09c813fb71547fc4f"
   #   instance_type = "t3.small"
-  #   ansible_role  = "dispatch-docker"
   # }
 }
 
