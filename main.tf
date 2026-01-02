@@ -11,6 +11,7 @@ module "ec2" {
   vault_token            = var.vault_token
  # ansible_role            = lookup(each.value, "ansible_role", each.key)
   key_name               = each.value["key_name"]
+  private_key            = var.private_key
 }
 
 #resource "aws_instance" "instances" {
