@@ -27,6 +27,7 @@ resource "aws_instance" "instances" {
   }
 }
 
+
 resource "aws_route53_record" "records" {
   zone_id = var.zone_id
   name    = "${var.tag_name}-${var.env}"
