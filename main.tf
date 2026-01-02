@@ -10,7 +10,7 @@ module "ec2" {
   tag_name               = each.key
   vault_token            = var.vault_token
  # ansible_role            = lookup(each.value, "ansible_role", each.key)
-
+  key_name               = var.key_name
 }
 
 #resource "aws_instance" "instances" {
