@@ -2,7 +2,7 @@ resource "aws_instance" "instances" {
   ami                    = var.ami_id
   instance_type          = var.instance_type
   vpc_security_group_ids = var.vpc_security_group_ids
-  key_name               = var.key_name
+#  key_name               = var.key_name
 
   # instance_market_options {
   #   market_type = "spot"
@@ -40,8 +40,8 @@ resource "null_resource" "ansible_code" {
     connection {
       type     = "ssh"
       user     = data.vault_generic_secret.sample.data["username"]
-      private_key = file(var.private_key_pem)
-#      password = data.vault_generic_secret.sample.data["password"]
+#      private_key = file(var.private_key_pem)
+      password = data.vault_generic_secret.sample.data["password"]
       host     = aws_instance.instances.private_ip
     }
 
