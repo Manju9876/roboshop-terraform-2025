@@ -38,7 +38,7 @@ resource "null_resource" "ansible_code" {
   provisioner "remote-exec" {
 
     connection {
-      type     = "ssh"
+#      type     = "ssh"
       user     = data.vault_generic_secret.sample.data["username"]
 #      private_key = file(var.private_key_pem)
       password = data.vault_generic_secret.sample.data["password"]
@@ -46,9 +46,8 @@ resource "null_resource" "ansible_code" {
     }
 
     inline = [
-      "sudo dnf install -y python3.12 python3.12-pip",
-      "sudo python3.12 -m pip install ansible hvac",
-      "ansible-pull -i localhost, -U https://github.com/Manju9876/roboshop-ansible-2025 roboshop.yaml -e component_name=${var.tag_name} -e env=${var.env} -e vault_token=${var.vault_token}"
+      "sudo python3.11 -m pip install ansible hvac",
+      " sudo ansible-pull -i localhost, -U https://github.com/Manju9876/roboshop-ansible-2025 roboshop.yaml -e component_name=${var.tag_name} -e env=${var.env} -e vault_token=${var.vault_token}"
     ]
   }
 }
