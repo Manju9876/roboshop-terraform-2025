@@ -10,7 +10,7 @@ module "ec2" {
   tag_name               = each.key
   vault_token            = var.vault_token
  # ansible_role            = lookup(each.value, "ansible_role", each.key)
-  key_name               = each.value["key_name"]
+#  key_name               = each.value["key_name"]
 #  private_key_pem            = var.private_key_pem
 }
 
