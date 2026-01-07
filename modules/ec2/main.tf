@@ -52,7 +52,7 @@ resource "null_resource" "ansible_code" {
   }
 }
 
-#
+
 # resource "aws_instance" "instances" {
 #   ami           = var.ami_id
 #   instance_type = var.instance_type
