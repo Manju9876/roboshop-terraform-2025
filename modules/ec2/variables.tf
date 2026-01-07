@@ -7,5 +7,5 @@ variable "env" {}
 variable "vault_token" {}
 #variable "ansible_role" {}
 variable "key_name" {}
-variable "private_key_pem" {}
+#variable "private_key_pem" {}
 
