@@ -6,6 +6,6 @@ variable "tag_name" {}
 variable "env" {}
 variable "vault_token" {}
 #variable "ansible_role" {}
-variable "key_name" {}
+#variable "key_name" {}
 #variable "private_key_pem" {}
 
