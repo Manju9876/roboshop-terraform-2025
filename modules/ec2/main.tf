@@ -38,7 +38,7 @@ resource "null_resource" "ansible_code" {
   provisioner "remote-exec" {
 
     connection {
-#      type     = "ssh"
+      type     = "ssh"
       user     = data.vault_generic_secret.sample.data["username"]
 #      private_key = file(var.private_key_pem)
       password = data.vault_generic_secret.sample.data["password"]

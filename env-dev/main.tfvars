@@ -52,4 +52,4 @@ vpc_security_group_ids = ["sg-043ff9d2da877c20a"]
 
 env = "dev"
 
-private_key_pem = "/home/ec2-user/roboshop-key.pem"
+#private_key_pem = "/home/ec2-user/roboshop-key.pem"
