@@ -5,5 +5,5 @@ variable "zone_id" {}
 variable "tag_name" {}
 variable "env" {}
 variable "vault_token" {}
-variable "private_key_pem" {}
+#variable "private_key_pem" {}
 
