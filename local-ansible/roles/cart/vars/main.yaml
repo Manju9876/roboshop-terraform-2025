@@ -1,0 +1,7 @@
+secrets:
+  - REDIS_HOST
+  - CATALOGUE_HOST
+  - CATALOGUE_PORT
+
+service_username: roboshop
+execstart_command: /bin/node /app/server.js

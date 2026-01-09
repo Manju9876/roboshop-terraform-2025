@@ -1,0 +1,28 @@
+- name: Copy service file
+  ansible.builtin.template:
+    src: common.service
+    dest: /etc/systemd/system/{{ component_name }}.service
+
+- name: Daemon reload and start the service
+  ansible.builtin.systemd:
+    name: "{{ component_name }}"
+    daemon_reload: yes
+    state: restarted
+    enabled: yes
+#
+#- name: Get secrets for this app
+#  ansible.builtin.set_fact:
+#    component_secrets: "{{ lookup('community.hashi_vault.hashi_vault', 'roboshop-{{ env }}/data/{{ component_name }} token={{ vault_token }} url=http://vault-internal.devopsbymanju.shop :8200') }}"
+#
+#- name: Copy SystemD service file
+#  ansible.builtin.template:
+#    src: component.service
+#    dest: /etc/systemd/system/{{ component_name }}.service
+#
+#
+#- name: Start Service
+#  ansible.builtin.systemd_service:
+#    name: "{{ component_name }}"
+#    state: restarted
+#    enabled: yes
+#    daemon_reload: yes

@@ -1,0 +1,5 @@
+secrets:
+  - MONGO_URL
+
+service_username: roboshop
+execstart_command: /bin/node /app/server.js

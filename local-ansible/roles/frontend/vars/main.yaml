@@ -1,0 +1,6 @@
+secrets:
+  - catalogue
+  - user
+  - cart
+  - shipping
+  - payment

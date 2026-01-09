@@ -1,0 +1,20 @@
+- name: Load Nodejs
+  ansible.builtin.include_role:
+    name: common
+    tasks_from: nodejs.yaml
+
+- name: Copy mongod repo from catalogue files
+  ansible.builtin.template:
+    src: mongo.repo
+    dest: /etc/yum.repos.d/mongo.repo
+
+- name: Install mongod
+  ansible.builtin.dnf:
+    name: mongodb-mongosh
+    state: installed
+
+- name: Load Master data schema
+  ansible.builtin.shell: mongosh --host mongodb-{{ env }}.devopsbymanju.shop </app/db/master-data.js
+
+
+

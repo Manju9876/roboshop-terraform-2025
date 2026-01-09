@@ -1,0 +1,5 @@
+- name: Setup prompt
+  ansible.builtin.shell: set-prompt {{ component_name }}
+
+#- name: install vault and ansible
+#  ansible.builtin.shell: python3.11 -m pip install ansible hvac
