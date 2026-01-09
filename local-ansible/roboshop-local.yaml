@@ -1,4 +1,5 @@
 - name: roboshop-local setup
+  become: true
   hosts: localhost
   connection: local
   roles:
