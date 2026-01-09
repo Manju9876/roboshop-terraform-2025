@@ -11,15 +11,15 @@ tag_name = {
   #   ami_id        = "ami-09c813fb71547fc4f"
   #   instance_type = "t3.small"
   #  }
-  cart = {
-    ami_id        = "ami-09c813fb71547fc4f"
-    instance_type = "t3.small"
-    #key_name      = "roboshop-key"
-  }
-  # mysql = {
+  # cart = {
   #   ami_id        = "ami-09c813fb71547fc4f"
   #   instance_type = "t3.small"
+  #   #key_name      = "roboshop-key"
   # }
+  mysql = {
+    ami_id        = "ami-09c813fb71547fc4f"
+    instance_type = "t3.small"
+  }
   # shipping = {
   #   ami_id        = "ami-09c813fb71547fc4f"
   #   instance_type = "t3.small"
