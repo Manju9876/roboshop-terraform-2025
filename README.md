@@ -2,3 +2,6 @@
 hello terraform 
 terraform is used to IAC
 terraform is a declarative language
+
+
+
