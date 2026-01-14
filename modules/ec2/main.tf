@@ -29,6 +29,8 @@ resource "aws_route53_record" "records" {
 }
 
 
+
+
 # resource "null_resource" "ansible_code" {
 #   depends_on = [aws_route53_record.records]
 #
