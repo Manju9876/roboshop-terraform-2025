@@ -5,6 +5,7 @@ variable "zone_id" {}
 variable "tag_name" {}
 variable "env" {}
 variable "vault_token" {}
+variable "docker_component_name" {}
 #variable "ansible_role" {}
 #variable "key_name" {}
 #variable "private_key_pem" {}

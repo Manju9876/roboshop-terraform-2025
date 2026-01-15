@@ -9,6 +9,7 @@ module "ec2" {
   env                    = var.env
   tag_name               = each.key
   vault_token            = var.vault_token
+  docker_component_name  = lookup(each.value, "docker_component_name", each.key)
  # ansible_role            = lookup(each.value, "ansible_role", each.key)
 #  key_name               = each.value["key_name"]
 #  private_key_pem            = var.private_key_pem

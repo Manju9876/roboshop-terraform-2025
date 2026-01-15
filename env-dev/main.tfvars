@@ -4,17 +4,19 @@ tag_name = {
     instance_type = "t3.small"
   }
   catalogue = {
-    ami_id        = "ami-0220d79f3f480ecf5"
-    instance_type = "t3.small"
-   }
+    ami_id                = "ami-0220d79f3f480ecf5"
+    instance_type         = "t3.small"
+    docker_component_name = "catalogue-docker"
+  }
   frontend = {
-    ami_id        = "ami-0220d79f3f480ecf5"
-    instance_type = "t3.small"
-   }
+    ami_id                = "ami-0220d79f3f480ecf5"
+    instance_type         = "t3.small"
+    docker_component_name = "frontend-docker"
+  }
   # cart = {
-  #   ami_id        = "ami-09c813fb71547fc4f"
-  #   instance_type = "t3.small"
-  #   #key_name      = "roboshop-key"
+  #   ami_id                = "ami-09c813fb71547fc4f"
+  #   instance_type         = "t3.small"
+  #   docker_component_name = "catalogue-docker"
   # }
   # mysql = {
   #   ami_id        = "ami-09c813fb71547fc4f"
@@ -23,6 +25,7 @@ tag_name = {
   # shipping = {
   #   ami_id        = "ami-09c813fb71547fc4f"
   #   instance_type = "t3.small"
+  #    docker_component_name = "shipping-docker"
   # }
   # redis = {
   #   ami_id        = "ami-09c813fb71547fc4f"
@@ -31,10 +34,12 @@ tag_name = {
   # payment = {
   #   ami_id        = "ami-09c813fb71547fc4f"
   #   instance_type = "t3.small"
+  #    docker_component_name = "payment-docker"
   # }
   # user = {
   #   ami_id        = "ami-09c813fb71547fc4f"
   #   instance_type = "t3.small"
+  # docker_component_name = "user-docker"
   # }
   # rabbitmq = {
   #   ami_id        = "ami-09c813fb71547fc4f"
@@ -43,6 +48,7 @@ tag_name = {
   # dispatch = {
   #   ami_id        = "ami-09c813fb71547fc4f"
   #   instance_type = "t3.small"
+  # docker_component_name = "dispatch-docker"
   # }
 }
 
