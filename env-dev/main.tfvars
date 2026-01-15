@@ -1,14 +1,14 @@
 tag_name = {
   mongodb = {
-    ami_id        = "ami-09c813fb71547fc4f"
+    ami_id        = "ami-0220d79f3f480ecf5"
     instance_type = "t3.small"
   }
   catalogue = {
-    ami_id        = "ami-09c813fb71547fc4f"
+    ami_id        = "ami-0220d79f3f480ecf5"
     instance_type = "t3.small"
    }
   frontend = {
-    ami_id        = "ami-09c813fb71547fc4f"
+    ami_id        = "ami-0220d79f3f480ecf5"
     instance_type = "t3.small"
    }
   # cart = {
