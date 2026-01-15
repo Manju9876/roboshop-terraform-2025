@@ -35,7 +35,8 @@ resource "null_resource" "ansible_code" {
   depends_on = [aws_route53_record.records]
 
   triggers = {
-    instance_id_change = aws_instance.instances.id
+    #instance_id_change = aws_instance.instances.id
+    always_run = timestamp()
   }
   provisioner "remote-exec" {
 
