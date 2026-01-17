@@ -45,11 +45,11 @@ tag_name = {
     ami_id        = "ami-0220d79f3f480ecf5"
     instance_type = "t3.small"
   }
-  dispatch = {
-    ami_id        = "ami-0220d79f3f480ecf5"
-    instance_type = "t3.small"
-  docker_component_name = "dispatch-docker"
-  }
+  # dispatch = {
+  #   ami_id        = "ami-0220d79f3f480ecf5"
+  #   instance_type = "t3.small"
+  # docker_component_name = "dispatch-docker"
+  # }
 }
 
 zone_id = "Z0739029GOTW9PY9KD3W"
