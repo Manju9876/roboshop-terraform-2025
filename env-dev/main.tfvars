@@ -23,32 +23,32 @@ tag_name = {
     instance_type = "t3.small"
   }
   shipping = {
-    ami_id        = "ami-0220d79f3f480ecf5"
-    instance_type = "t3.small"
-     docker_component_name = "shipping-docker"
+    ami_id                = "ami-0220d79f3f480ecf5"
+    instance_type         = "t3.small"
+    docker_component_name = "shipping-docker"
   }
   redis = {
     ami_id        = "ami-0220d79f3f480ecf5"
     instance_type = "t3.small"
   }
   payment = {
-    ami_id        = "ami-0220d79f3f480ecf5"
-    instance_type = "t3.small"
-     docker_component_name = "payment-docker"
+    ami_id                = "ami-0220d79f3f480ecf5"
+    instance_type         = "t3.small"
+    docker_component_name = "payment-docker"
   }
   user = {
-    ami_id        = "ami-0220d79f3f480ecf5"
-    instance_type = "t3.small"
-  docker_component_name = "user-docker"
+    ami_id                = "ami-0220d79f3f480ecf5"
+    instance_type         = "t3.small"
+    docker_component_name = "user-docker"
   }
   rabbitmq = {
     ami_id        = "ami-0220d79f3f480ecf5"
     instance_type = "t3.small"
   }
   dispatch = {
-    ami_id        = "ami-0220d79f3f480ecf5"
-    instance_type = "t3.small"
-  docker_component_name = "dispatch-docker"
+    ami_id                = "ami-0220d79f3f480ecf5"
+    instance_type         = "t3.small"
+    docker_component_name = "dispatch-docker"
   }
 }
 
