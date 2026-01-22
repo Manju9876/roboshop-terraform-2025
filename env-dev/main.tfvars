@@ -52,9 +52,9 @@ tag_name = {
   }
 }
 
-zone_id = "Z0739029GOTW9PY9KD3W"
+zone_id = "Z02051092BEEJ2ZXO112M"
 
-vpc_security_group_ids = ["sg-043ff9d2da877c20a"]
+vpc_security_group_ids = ["sg-0bfcec5814efb9ebf"]
 
 env = "dev"
 
