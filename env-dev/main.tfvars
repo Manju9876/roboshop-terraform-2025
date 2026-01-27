@@ -3,6 +3,7 @@ tag_name = {
     ami_id        = "ami-0220d79f3f480ecf5"
     instance_type = "t3.small"
   }
+
   catalogue = {
     ami_id                = "ami-0220d79f3f480ecf5"
     instance_type         = "t3.small"
@@ -51,6 +52,8 @@ tag_name = {
   docker_component_name = "dispatch-docker"
   }
 }
+
+
 
 zone_id = "Z02051092BEEJ2ZXO112M"
 
