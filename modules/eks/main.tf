@@ -21,7 +21,7 @@ resource "aws_eks_node_group" "main" {
   node_group_name = each.key
   node_role_arn   = aws_iam_role.node_role.arn
   subnet_ids      = var.subnets
-  instance_types = each.value[instance_types]
+  instance_types  = each.value["instance_types"]
 
   scaling_config {
     desired_size = each.value["min_nodes"]
