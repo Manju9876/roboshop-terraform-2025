@@ -63,6 +63,6 @@ env = "dev"
 eks = {
   main = {
     subnets = ["subnet-03d60ac302ec86577", "subnet-0bcb39e32e7a065f2"]
-    version = 1.32
+    eks_version = 1.32
   }
 }
