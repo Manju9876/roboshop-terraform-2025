@@ -53,12 +53,16 @@ tag_name = {
   }
 }
 
-
-
 zone_id = "Z02051092BEEJ2ZXO112M"
-
 vpc_security_group_ids = ["sg-0bfcec5814efb9ebf"]
-
 env = "dev"
-
 #private_key_pem = "/home/ec2-user/roboshop-key.pem"
+
+
+
+eks = {
+  main = {
+    subnets = ["subnet-03d60ac302ec86577", "subnet-0bcb39e32e7a065f2"]
+    version = 1.32
+  }
+}

@@ -1,53 +1,26 @@
-module "ec2" {
-  for_each = var.tag_name
-  source   = "./modules/ec2"
-
-  ami_id                 = each.value["ami_id"]
-  instance_type          = each.value["instance_type"]
-  vpc_security_group_ids = var.vpc_security_group_ids
-  zone_id                = var.zone_id
-  env                    = var.env
-  tag_name               = each.key
-  vault_token            = var.vault_token
-  docker_component_name  = lookup(each.value, "docker_component_name", each.key)
-
- # ansible_role            = lookup(each.value, "ansible_role", each.key)
-#  key_name               = each.value["key_name"]
-#  private_key_pem            = var.private_key_pem
-}
-
-#resource "aws_instance" "instances" {
-#   count = length(var.instance_name)
-#   ami           = var.ami_id
-#   instance_type = var.instance_type
+# module "ec2" {
+#   for_each = var.tag_name
+#   source   = "./modules/ec2"
+#
+#   ami_id                 = each.value["ami_id"]
+#   instance_type          = each.value["instance_type"]
 #   vpc_security_group_ids = var.vpc_security_group_ids
+#   zone_id                = var.zone_id
+#   env                    = var.env
+#   tag_name               = each.key
+#   vault_token            = var.vault_token
+#   docker_component_name  = lookup(each.value, "docker_component_name", each.key)
 #
-#   tags = {
-#     Name = var.instance_name[count.index]
-#   }
+#  # ansible_role            = lookup(each.value, "ansible_role", each.key)
+# #  key_name               = each.value["key_name"]
+# #  private_key_pem            = var.private_key_pem
 # }
 
-#
-# resource "aws_route53_record" "catalogue" {
-#   zone_id = "Z03117651054LFO2TDC32"
-#   name    = "catalogue-dev"
-#   type    = "A"
-#   ttl     = 30
-#   records = [aws_instance.catalogue.private_ip]
-# }
-#
-# resource "null_resource" "catalogue" {
-#   provisioner "remote-exec" {
-#
-#     connection {
-#       type = "ssh"
-#       user = "ec2-user"
-#       password = "DevOps321"
-#       host = self.public_ip
-#     }
-#     inline = [
-#       "sudo python3.11 -m pip install ansible",
-#       "ansible-pull -i localhost, -U https://github.com/Manju9876/roboshop-ansible-2025.git -e component_name=frontend -e env=dev roboshop.yaml",
-#     ]
-#   }
-# }
+module "eks" {
+  for_each = var.eks
+  source = "./modules/eks"
+
+  env = var.env
+  eks_version = each.value["eks_version"]
+  subnets = each.value["subnets"]
+}

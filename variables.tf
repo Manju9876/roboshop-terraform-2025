@@ -7,3 +7,4 @@ variable "env" {}
 variable "vault_token" {}
 #variable "private_key_pem" {}
 
+variable "eks" {}
