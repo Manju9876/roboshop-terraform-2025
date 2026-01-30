@@ -28,8 +28,4 @@ resource "aws_eks_node_group" "main" {
     max_size     = each.value["max_nodes"]
     min_size     = each.value["min_nodes"]
   }
-
-  tags = {
-    Name = each.value["tag_name"]
-  }
 }
