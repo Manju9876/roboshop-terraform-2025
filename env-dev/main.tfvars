@@ -28,10 +28,10 @@ db_instances = {
   #   instance_type = "t3.small"
   #    docker_component_name = "shipping-docker"
   # }
-  redis = {
-    ami_id        = "ami-0220d79f3f480ecf5"
-    instance_type = "t3.small"
-  }
+  # redis = {
+  #   ami_id        = "ami-0220d79f3f480ecf5"
+  #   instance_type = "t3.small"
+  # }
   # payment = {
   #   ami_id        = "ami-0220d79f3f480ecf5"
   #   instance_type = "t3.small"
@@ -42,10 +42,10 @@ db_instances = {
   #   instance_type = "t3.small"
   # docker_component_name = "user-docker"
   # }
-  rabbitmq = {
-    ami_id        = "ami-0220d79f3f480ecf5"
-    instance_type = "t3.small"
-  }
+  # rabbitmq = {
+  #   ami_id        = "ami-0220d79f3f480ecf5"
+  #   instance_type = "t3.small"
+  # }
   # dispatch = {
   #   ami_id        = "ami-0220d79f3f480ecf5"
   #   instance_type = "t3.small"
