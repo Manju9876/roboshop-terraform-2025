@@ -71,5 +71,8 @@ eks = {
         tag_name = "cluster_node_1"
       }
     }
+    addons = {
+      metrics-server = {}
+    }
   }
 }

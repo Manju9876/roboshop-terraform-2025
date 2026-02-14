@@ -3,3 +3,4 @@ variable "env" {}
 variable "subnets" {}
 
 variable "node_groups" {}
+variable "addons" {}
