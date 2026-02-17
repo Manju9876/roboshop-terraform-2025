@@ -66,6 +66,7 @@ eks = {
     node_groups = {
       main = {
         min_nodes = 3
+        desired_nodes= 3
         max_nodes = 10
         instance_types = ["t3.medium","t3.small"]
         tag_name = "cluster_node_1"
