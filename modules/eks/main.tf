@@ -1,3 +1,11 @@
+terraform {
+  required_providers {
+    null = {
+      source  = "hashicorp/null"
+      version = "3.2.4"
+    }
+  }
+}
 resource "aws_eks_cluster" "main" {
   name = "${var.env}_eks_cluster"
 
@@ -35,4 +43,13 @@ resource "aws_eks_addon" "addons" {
 
   cluster_name = aws_eks_cluster.main.name
   addon_name   = each.key
+}
+
+resource "null_resource" "kubeconfig" {
+  depends_on = [aws_eks_cluster.main]
+
+  provisioner "local-exec" {
+    command = "aws eks update-kubeconfig --name ${aws_eks_cluster.main.name}"
+  }
+
 }
