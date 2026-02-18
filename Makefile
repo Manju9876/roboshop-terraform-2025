@@ -3,7 +3,6 @@ dev-apply:
 	rm -f .terraform/terraform.tfstate
 	terraform init -backend-config=env-dev/state.tfvars
 	terraform apply -auto-approve -var-file=env-dev/main.tfvars -var vault_token=$(vault_token)
-	aws eks update-kubeconfig --name dev_eks_cluster
 
 dev-destroy:
 	git pull
