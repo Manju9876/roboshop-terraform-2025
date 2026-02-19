@@ -1,8 +1,8 @@
 db_instances = {
-  mongodb = {
-    ami_id        = "ami-0220d79f3f480ecf5"
-    instance_type = "t3.small"
-  }
+  # mongodb = {
+  #   ami_id        = "ami-0220d79f3f480ecf5"
+  #   instance_type = "t3.small"
+  # }
   # catalogue = {
   #   ami_id                = "ami-0220d79f3f480ecf5"
   #   instance_type         = "t3.small"
