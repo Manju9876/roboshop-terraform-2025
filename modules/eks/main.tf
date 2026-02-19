@@ -33,7 +33,7 @@ resource "aws_eks_node_group" "main" {
   instance_types  = each.value["instance_types"]
 
   scaling_config {
-    desired_size = each.value["desired_nodes"]
+    desired_size = each.value["min_nodes"]
     max_size     = each.value["max_nodes"]
     min_size     = each.value["min_nodes"]
   }
