@@ -52,7 +52,7 @@ db_instances = {
   # }
 }
 
-zone_id = "Z02051092BEEJ2ZXO112M"
+zone_id = "Z08819072319VLT801BHA"
 vpc_security_group_ids = ["sg-0bfcec5814efb9ebf"]
 env = "dev"
 #private_key_pem = "/home/ec2-user/roboshop-key.pem"
