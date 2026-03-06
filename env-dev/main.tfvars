@@ -61,7 +61,7 @@ env = "dev"
 
 eks = {
   main = {
-    subnets     = ["subnet-01f515dd747c26da6", "subnet-044c2d49f3d609394"]
+    subnets     = ["subnet-0563c99ae150cdb89", "subnet-01a95952043ef86f1"]
     eks_version = 1.35
     node_groups = {
       main = {
