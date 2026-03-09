@@ -56,3 +56,5 @@ resource "null_resource" "kubeconfig" {
 }
 
 
+
+
