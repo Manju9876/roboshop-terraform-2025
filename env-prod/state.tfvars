@@ -1,3 +1,3 @@
 bucket       = "terraform-data-2025"
-key          = "env-dev/state"
+key          = "env-prod/state"
 region       = "us-east-1"
