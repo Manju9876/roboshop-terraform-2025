@@ -11,3 +11,4 @@ jobs:
           ls ${{ github.workspace }}
           terraform init -backend-config=env-dev/state.tfvars
 
+
