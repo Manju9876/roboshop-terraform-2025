@@ -44,7 +44,7 @@ jobs:
       - name: Helm install application
         run: |
           export PATH=/home/ec2-user/.local/bin:/home/ec2-user/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin 
-          for chart in frontend catalogue user shipping payment cart ; do make env=dev component=$$chart;done
-        env:
-          vault_token: ${{ secrets.vault_token }}
+          cd helm
+          make dev
+
 
