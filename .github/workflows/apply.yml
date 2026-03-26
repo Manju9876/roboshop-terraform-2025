@@ -32,7 +32,7 @@ jobs:
           vault_token: ${{ secrets.vault_token }}
       - name: simple notify
         if: ${{ always() }}
-        run: echo "Terraform finished - Status ${{ job.status }} on ${{ github.ref_name }} by ${{ github.actor }}"
+        run: echo "Terraform finished - Status ${{ job.status }} on ${{ github.ref_name }} by ${{ github.actor }}"  >> $GITHUB_STEP_SUMMARY
 #  Helm-Install-Applications:
 #    runs-on: self-hosted
 #    needs: Terraform-Apply
