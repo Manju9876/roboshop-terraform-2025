@@ -28,10 +28,10 @@ jobs:
           export PATH=/home/ec2-user/.local/bin:/home/ec2-user/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin 
           terraform init -backend-config=env-dev/state.tfvars
           terraform plan -var-file=env-dev/main.tfvars -var vault_token=${vault_token} 2 | tail -n6 | head -n1 >> $GITHUB_STEP_SUMMARY
-          echo "Terraform finished - Status ${{ job.status }} on ${{ github.ref_name }} by ${{ github.actor }}"
         env:
           vault_token: ${{ secrets.vault_token }}
-
+      - name: simple notify
+        run: echo "Terraform finished - Status ${{ job.status }} on ${{ github.ref_name }} by ${{ github.actor }}"
 #  Helm-Install-Applications:
 #    runs-on: self-hosted
 #    needs: Terraform-Apply
