@@ -1,4 +1,4 @@
-name: Roboshop-Setup
+name: Terraform Apply
 on: [workflow_dispatch]
 jobs:
 #  Terraform-Init:
