@@ -58,7 +58,6 @@ env = "dev"
 #private_key_pem = "/home/ec2-user/roboshop-key.pem"
 
 
-
 eks = {
   main = {
     subnets     = ["subnet-0563c99ae150cdb89", "subnet-01a95952043ef86f1"]
